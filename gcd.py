@@ -1,10 +1,10 @@
-def gcd(a, b):
+def gcd(a, b, prnt = True):
     d = {}
     v = __gcd(a, b, d)
     while not d[v][1] == a and not d[v][3] == b:
-        tmp = d[d[v][3]]
         d[v] = (d[v][2], d[d[v][3]][1], d[v][0]+d[v][2]*d[d[v][3]][2], d[v][1])
-    print(f'gcd({a}, {b}) = {v} = ({d[v][0]})({d[v][1]}) + ({d[v][2]})({d[v][3]})')
+    if prnt: print(f'gcd({a}, {b}) = {v} = ({d[v][0]})({d[v][1]}) + ({d[v][2]})({d[v][3]})')
+    return v, d[v][0], d[v][2] 
 
 def __gcd(a, b, d = {}):
     if b > a: a, b = b, a
@@ -15,4 +15,12 @@ def __gcd(a, b, d = {}):
         return b
     return __gcd(b, r, d)
 
-gcd(57970, 10353)
+def find_modular_inverse(b, n, prnt = True):
+    if b == 0:
+        print(f'0 cannot have a multiplicative inverse.')
+        return
+    v, _, y = gcd(n, b, prnt=False)
+    if prnt: print(y % n)
+    return y % n
+
+find_modular_inverse(5, 21)
