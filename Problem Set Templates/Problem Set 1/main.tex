@@ -1,0 +1,136 @@
+\documentclass[10pt]{article}
+
+%Now, we can import whatever packages we may need
+%These are the ones I commonly utilize.
+\usepackage[english]{babel}
+\usepackage{amsmath} %Contains useful commands like \text and equation environment
+\usepackage{amsthm} %Helps to define theorem structures, includes \newtheorem and proof environment
+\usepackage{amssymb} %Provides an extended symbol collection
+\usepackage{graphicx} %Allows us to display figures
+\usepackage{fancyvrb} %Contains the Verbatim environment, allowing us to type code blocks
+\usepackage{fancyhdr} %Allows us to customize headers and footers
+\usepackage{lastpage} %Gives us the last page as a command \pageref{LastPage}
+\usepackage{hyperref} %Allows us to have hyper links in our text, \href
+\usepackage{cleveref} %Fancier version of reference by using \cref
+\usepackage[labelformat=empty]{caption}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{tikz}
+\usepackage{witharrows}
+
+%Here we create some useful shortcuts for fancy characters and spacing
+\newcommand{\bb}[1]{\mathbb{#1}} %Shortcut for bold faced characters
+\newcommand{\Z}{\bb{Z}} %Returns the set of Integers symbol
+\newcommand{\Q}{\bb{Q}} %Returns set of rational numbers symbol
+\newcommand{\R}{\bb{R}} %Real numbers symbol
+\newcommand{\C}{\bb{C}} %Complex numbers symbol
+\newcommand{\N}{\bb{N}} %Natural numbers symbol
+\newcommand{\obar}[1]{\overline{#1}} %Shortcut for putting an overline over a symbol for equivalence classes
+\newcommand{\dent}{\hspace{\parindent}} %Forces an indent in the current line
+
+%Adjust our page setup
+\setlength{\topmargin}{-0.3in} %Removes some top margin so our header and footer begins higher up
+\setlength{\oddsidemargin}{0in} %Custom margin for even and odd pages
+\setlength{\evensidemargin}{0in} %Used when printing double-sided papers 
+\setlength{\textheight}{9in} %Leaves 1 inch at top and 1 inch at bottom
+\setlength{\textwidth}{6.5in} %Leaves 3/4 inch on each side
+\setlength{\parindent}{20pt} %Here you can customize a paragraph indentation
+
+%Set up our headers and footers
+\pagestyle{fancy} %Sets our page style using fancyhdr
+\lhead{Math 735} %Left Header
+\chead{Homework \#1}
+\rhead{\today\\Name Here} %Right Header
+\cfoot{\thepage \ of \pageref{LastPage}} %Center Footer
+\renewcommand{\footrulewidth}{0.4pt} %Enables horizontal line above the footer
+
+%Commands for theorem environments
+\newtheorem{theorem}{Theorem}
+
+%Custom Theorem Numbering
+\newenvironment{customthm}[1]
+  {\renewcommand\thetheorem{#1}\theorem}
+  {\endtheorem}
+
+\setcounter{totalnumber}{4}
+
+\setlength{\headheight}{22.54448pt}
+
+%Set up our hyperlink settings
+\hypersetup{colorlinks, citecolor=black, filecolor=black, linkcolor=black, urlcolor=blue}
+
+\begin{document}
+
+    \begin{center}
+        \section*{0.2 Properties of the Integers}
+    \end{center}
+
+    \begin{itemize}
+        \item[6.] Prove the Well Ordering Property of \(\Z\) by induction and prove the minimal element is unique.
+
+        \begin{customthm}{}
+            (Well Ordering of \(\Z\)) If \(A\) is any nonempty subset of \(\Z^+\), there is some element \(m\in A\) such that \(m\leq a\), for all \(a\in A\) (\(m\) is called the \emph{minimal} element of \(A\).
+        \end{customthm}
+
+        \begin{proof}
+            %%%%%%%%%%%%%%%%%%%%%%
+            % TYPE UP PROOF HERE %
+            %%%%%%%%%%%%%%%%%%%%%%
+        \end{proof}
+        
+    \end{itemize}
+
+    \begin{itemize}
+        \item[11.] Prove that if \(d\) divides \(n\) then \(\varphi(d)\) divides \(\varphi(n)\) where \(\varphi\) denotes Euler's \(\varphi\)-function.
+
+        \begin{proof}
+            %%%%%%%%%%%%%%%%%%%%%%
+            % TYPE UP PROOF HERE %
+            %%%%%%%%%%%%%%%%%%%%%%
+        \end{proof}
+        
+    \end{itemize}
+
+    \begin{center}
+        \section*{0.3 \(\Z/n\Z\,:\,\)The Integers Modulo \(n\)}
+    \end{center}
+
+    \begin{itemize}
+        \item[10.] Prove that the number of elements of \((\Z/n\Z)^\times\) is \(\varphi(n)\) where \(\varpi\) denotes the Euler \(\varphi\)-function.
+
+        \begin{proof}
+            %%%%%%%%%%%%%%%%%%%%%%
+            % TYPE UP PROOF HERE %
+            %%%%%%%%%%%%%%%%%%%%%%
+        \end{proof}
+        
+    \end{itemize}
+
+    \begin{itemize}
+        \item[11.]Prove that if \(\obar{a},\obar{b}\in(\Z/n\Z)^\times\), then \(\obar{a}\cdot\obar{b}\in(\Z/n\Z)^\times\).
+
+        \begin{proof}
+            %%%%%%%%%%%%%%%%%%%%%%
+            % TYPE UP PROOF HERE %
+            %%%%%%%%%%%%%%%%%%%%%%
+        \end{proof}
+        
+    \end{itemize}
+
+    \noindent\textbf{How did you get interested in math?}
+
+    Answer Here
+
+    \vspace{5pt}
+
+    \noindent\textbf{What are your goals for the course and for the semester?}
+
+    Answer Here
+
+    \vspace{5pt}
+
+    \noindent\textbf{Tell me about someone you met in this course. (This will require you to meet someone - preferably new!- in the course outside of class to strike up a conversation.)}
+
+    Answer Here
+
+\end{document}
