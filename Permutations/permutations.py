@@ -22,7 +22,7 @@ class Permutation:
         codomain = set(self.d.values())
         if not domain == codomain or not len(domain) == len(codomain):
             raise ValueError()
-    
+
     def __str__(self) -> str:
         s = '(1'
         cycle_start = 1
