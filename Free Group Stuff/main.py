@@ -106,19 +106,3 @@ def find_max_combo(l: list[Commutator], x: int) -> int:
                 # print(tmp.full_string())
                 m = tmp.max_exp('a')
     return m
-
-def interesting_search():
-    cnt = 1
-    while True:
-        print(cnt)
-        cnt += 1
-        l = [random_commutator(['a','b'],5,10) for _ in range(4)]
-        l2 = find_max_combo(l, 2)
-        l3 = find_max_combo(l, 3)
-        l4 = find_max_combo(l, 4)
-        if l2 < l3 and l3 < l4:
-            for c in l:
-                print(c.full_string())
-                return
-
-interesting_search()
